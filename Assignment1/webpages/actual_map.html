@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This is the HEADER section.......................... -->
+
+<head>
+	<!-- This statement tells browsers how to understand our characters -->
+	<meta charset="utf-8">
+	<!-- This is our title. It is mandatory. -->
+	<title>Location-Map</title>
+	<!-- This statement associates this html page with an external style sheet-->
+	<link rel="stylesheet" type="text/css" href="../CSS_ASS/css1.css"/>
+	
+	<!-- The id #map in the syle tag formats the size of the map-->
+	<style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+
+</head>
+
+<!-- This is the body section  --> 
+<body>
+
+<!-- open "navigation" division -->  
+<div id="navigation">
+
+<!-- open "banner" division. It sets the banner i.e. image at the top of the website -->  
+<div id="banner">
+<img src="../images/header_1.jpg" alt="Liverpool FC banner"  >
+</div>
+
+<!-- open "menu" division -->
+<div id="menu">
+
+<!-- This is our menu, using anchor links to other webpages. --> 
+<ul>
+	<li><a>Home</a>
+		<ul>
+			<li><a href="mission.html">Mission</a></li>
+			<li><a href="home.html">About me</a></li>
+			<li><a href="myPassion.html">My Passion</a></li>
+		</ul>
+	</li>
+
+	<li><a href="../../assignment.html">Assignment</a></li>
+	<li><a href="imagemap_.html">ImageMap</a></li>
+	<li><a href="gallery.html">Gallery</a></li>
+	<li><a href="video.html">Comic Video</a></li>
+	<li><a href="feedback.html">Feedback</a></li>
+	<li><a href="rss.html">RSS Feed</a></li>
+	<li><a href="#" class="active">Location</a></li> 
+</ul>
+
+<!-- close "menu" division -->
+</div>
+
+<!-- close "navigation" division -->
+</div>
+<br><br>
+<br>
+<h3>Locations of Homeground of Top Football teams</h3>
+    
+<!-- open "floating-panel" division. This division displays the radio buttons -->
+<div id="floating-panel" style="float:left;">
+<input type="radio" name="map_function" value="Anfield" onclick="drop2();" checked> Anfield (LFC Stadium)<br>
+<input type="radio" name="map_function" value="England" onclick="drop();"> Top 10 English Teams<br>
+<input type="radio" name="map_function" value="Europe" onclick="drop1();"> Top 10 European Teams<br>
+<span>(Please zoom in more to find the accurate locations)</span>
+<!-- close "floating-panel" division -->
+</div>
+
+<!-- open "map" division. This division displays the map -->
+<div id="map" style="width:70%;height:400px;margin: auto;">
+
+<!-- close "map" division --> 
+</div>
+
+<!-- This script is responsible for defining the maps -->
+<script>
+
+
+	// This var defines the locations for top 10 England teams
+	var neighborhoods = [
+        {lat: 51.4817, lng: -0.1910},
+        {lat: 51.6032, lng: -0.0657},
+        {lat: 53.4831, lng: -2.2004},
+        {lat: 53.4308, lng: -2.9608},
+        {lat: 51.5549, lng: -0.1084},
+        {lat: 53.4631, lng: -2.2913},
+        {lat: 53.4388, lng: -2.9663},
+        {lat: 50.9035, lng: -1.3880},
+        {lat: 50.7352, lng: -1.8383},
+        {lat: 52.5090, lng: -1.9639},      
+    ];
+    
+    // This var defines the locations for top 10 European teams
+    var neighborhoods1 = [
+        {lat: 40.4531, lng: -3.6883},
+        {lat: 48.2188, lng: 11.6247},
+        {lat: 41.3809, lng:  2.1228},
+        {lat: 40.4017, lng: -3.7206},
+        {lat: 45.1096, lng:  7.6413},
+        {lat: 48.8414, lng:  2.2530},
+        {lat: 51.4926, lng:  7.4519},
+        {lat: 37.3841, lng: -5.9707},
+        {lat: 38.7527, lng: -9.1848},
+        {lat: 51.4817, lng: -0.1910},      
+    ];
+    
+    var england_names = [
+        "1","2","3","4","5","6","7","8","9","10"
+    ];
+
+    var markers = [];
+    var marker;
+    var map; 
+	var temp = 0;
+	var temp1 =0;
+
+	// Initialising the map. On startup, the map displays Anfield location
+	function initMap() {	
+		map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: {lat: 53.4308, lng: -2.9608}
+        });
+        
+        marker = new google.maps.Marker({
+		position: {lat: 53.4308, lng: -2.9608},
+   		map: map
+  		});
+	}
+	 	
+	// This function resizes the map according to top 10 English teams 	
+	function englandMap() {
+		marker.setMap(null);
+		bounds = new google.maps.LatLngBounds();
+		var loc = new google.maps.LatLng("51.4817","-0.1910");
+		bounds.extend(loc);
+		var loc1 = new google.maps.LatLng("51.6032","-0.0657");
+		bounds.extend(loc1);
+		var loc2 = new google.maps.LatLng("53.4831","-2.2004");
+		bounds.extend(loc2);
+		var loc3 = new google.maps.LatLng("53.4308","-2.9608");
+		bounds.extend(loc3);
+		var loc4 = new google.maps.LatLng("50.7352","-1.8383");
+		bounds.extend(loc4);
+		map.fitBounds(bounds);
+		map.panToBounds(bounds); 
+	}
+
+	// This function resizes the map according to top 10 European teams
+	function europeMap() {
+		marker.setMap(null);
+		bounds = new google.maps.LatLngBounds();
+		var loc = new google.maps.LatLng("37.3841","-5.9707");
+		bounds.extend(loc);
+		var loc1 = new google.maps.LatLng("51.4926","7.4519");
+		bounds.extend(loc1);
+		var loc2 = new google.maps.LatLng("48.2188","11.6247");
+		bounds.extend(loc2);
+		var loc3 = new google.maps.LatLng("38.7527","-9.1848");
+		bounds.extend(loc3);	
+		map.fitBounds(bounds);
+		map.panToBounds(bounds); 
+	}
+	
+         
+    // This function displays the top 10 English teams
+    function drop() {
+    	clearMarkers();
+        englandMap();
+        for (var i = 0; i < neighborhoods.length; i++) {
+          	addMarkerWithTimeout(neighborhoods[i], i * 200,i);
+        } 
+    }
+    
+    //This function displays the top 10 European teams
+    function drop1() {
+    	clearMarkers();
+        europeMap();
+        for (var i = 0; i < neighborhoods1.length; i++) {
+          	addMarkerWithTimeout(neighborhoods1[i], i * 200,i);
+        }
+    }
+    
+    //This function displays the "Anfield" location
+    function drop2() {
+    	clearMarkers();
+        marker.setMap(null);
+        bounds = new google.maps.LatLngBounds();
+		var loc = new google.maps.LatLng("53.4308","-2.7608");
+		bounds.extend(loc);
+		var loc1 = new google.maps.LatLng("53.4308","-3.2608");
+		bounds.extend(loc1);
+		var loc2 = new google.maps.LatLng("53.2308","-2.9608");
+		bounds.extend(loc2);
+		var loc3 = new google.maps.LatLng("53.6308","-2.9608");
+		bounds.extend(loc3);	
+		map.fitBounds(bounds);
+		map.panToBounds(bounds); 
+        marker = new google.maps.Marker({
+		position: {lat: 53.4308, lng: -2.9608},
+   		map: map
+  		});
+    }
+
+ 	// If you're adding a number of markers, you may want to drop them on the map
+    // consecutively rather than all at once. This example shows how to use
+    // window.setTimeout() to space your markers' animation.
+    function addMarkerWithTimeout(position, timeout,i) {
+        window.setTimeout(function() {
+        	markers.push(new google.maps.Marker({
+            	position: position,
+            	label: {
+    			text: england_names[i],
+   				 color: 'white',
+  				},
+            	map: map,
+            	animation: google.maps.Animation.DROP
+          	}));
+        }, timeout);
+    }
+
+	// This function clears all the markers
+    function clearMarkers() {
+    	for (var i = 0; i < markers.length; i++) {
+        	markers[i].setMap(null);
+        }
+        markers = [];
+    }
+</script>
+
+<!-- This script is responsible for loading the map from Google Maps API -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgWQgIlCrf12FsyeMeGgdRfDbWIrm4pvI&callback=initMap">
+</script>
+
+<br><br><br> 
+
+<!-- open "footer" division. This division sets the footer of the webpage -->
+<div class="footer"> 
+<div id="sitemap_footer">
+<a href="sitemap.html" class="active">SiteMap</a>
+</div>
+<abbr title="Facebook"><a href="https://www.facebook.com/ramseth001" target="_blank"><img src="../images/facebook_logo.png" height="35" alt="facebook logo" ></a></abbr>&nbsp;
+<abbr title="Twitter"><a href="https://www.twitter.com/ramseth001" target="_blank"><img src="../images/twitter_logo.png" height="35" alt="twitter logo" ></a></abbr>
+<abbr title="Blogger"><a href="https://ramseth001blog.blogspot.com.au/" target="_blank"><img src="../images/blogger_logo.png" height="35" alt="twitter logo" ></a></abbr>
+<abbr title="Instagram"><a href="https://instagram.com/ramseth001" target="_blank"><img src="../images/instagram-logo.png" height="35" alt="twitter logo" ></a></abbr>
+
+<!-- close "footer" division -->
+</div>
+
+<!-- Close body of webpage -->
+</body>
+<!-- Close html-->
+</html>

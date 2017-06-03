@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This is the HEADER section.......................... -->
+
+<head>
+	<!-- This statement tells browsers how to understand our characters -->
+	<meta charset="utf-8">
+	<!-- This is our title. It is mandatory. -->
+	<title>Feedback</title>
+	<!-- This statement associates this html page with an external style sheet-->
+	<link rel="stylesheet" type="text/css" href="../CSS_ASS/css1.css"/>
+	<!-- This script validates the content entered into the feedback form -->
+	<script>
+	function validateForm(){
+	var x = document.forms["feedback_form"]["Positive Feedback"].value;
+	var y = document.forms["feedback_form"]["Room for Improvement"].value;
+	var y1 = document.forms["feedback_form"]["Person Name"].value;
+	var y2 = document.forms["feedback_form"]["AGE"].value;
+	var y3 = document.forms["feedback_form"]["Email"].value;
+	if((x.trim() == "") && (y.trim() == "")){
+		alert("Please fill either positive feedback or room for improvement or both ");
+		return false;
+		}
+	if((y1.trim() !="") && (y2.trim()!="") && y3.trim()!=""){
+		alert("Thank You for your feedback !!");
+		setTimeout(function(){this.document.location.href="home.html"},3000);
+		}
+	}
+	</script>
+</head>
+
+<!-- This is the body section  --> 
+<body>
+
+<!-- open "navigation" division -->  
+<div id="navigation">
+
+<!-- open "banner" division. It sets the banner i.e. image at the top of the website -->  
+<div id="banner">
+<img src="../images/header_1.jpg" alt="Liverpool FC banner"  >
+</div>
+
+<!-- open "menu" division -->
+<div id="menu">
+
+<!-- This is our menu, using anchor links to other webpages. --> 
+<ul>
+	<li><a>Home</a>
+		<ul>
+			<li><a href="mission.html">Mission</a></li>
+			<li><a href="home.html">About me</a></li>
+			<li><a href="myPassion.html">My Passion</a></li>
+		</ul>
+	</li>
+
+	<li><a href="../../assignment.html">Assignment</a></li>
+	<li><a href="imagemap_.html">ImageMap</a></li>
+	<li><a href="gallery.html">Gallery</a></li>
+	<li><a href="video.html">Comic Video</a></li>
+	<li><a href="#" class="active">Feedback</a></li>
+	<li><a href="rss.html">RSS Feed</a></li>
+	<li><a href="actual_map.html">Location</a></li> 
+</ul>
+
+<!-- close "menu" division -->
+</div>
+
+<!-- close "navigation" division -->
+</div>
+<br><br>
+<br>
+<!-- Open "feeback" form. This div contains the elements of feedback form -->
+<div id = "feedback">
+
+<!-- This h4 section contains the quote-->
+<h4> <q>One of the things I've learned is to be receptive of feedback</q> - Ben Silbermann</h4>
+<p>I value your feedback &#9786;&#9786;&#9786;  !!
+Please take a moment to fill the form below to let me know about your experience with my website. </p>
+
+<!-- This section contains the elements of feedback form-->
+<form enctype="text/plain" name="feedback_form" method="post" onsubmit = "return validateForm()"
+action="mailto:u5849435@anu.edu.au?Subject=Assignment%20Website%20Feedback"	>
+ 	<table>
+ 		<tr>
+ 			<td>Name:</td>
+ 			<td><input type="text" name="Person Name" required maxlength="30"></td>
+ 		</tr>
+ 		<tr>
+ 			<td>Age:</td>
+ 			<td><input type="number" name="AGE" required min="1" max="120"></td>
+ 		</tr>
+ 		<tr>
+ 			<td>Email:</td>
+  			<td><input type="email" name="Email" required maxlength="30"></td>
+  		</tr>
+  		<tr>
+ 			<td>Gender:</td>
+  			<td><input type="radio" name="Sex" required value="male">Male
+			<input type="radio" name="Sex" required value="female">Female<br></td>
+  		</tr>
+  	</table>
+  	What do you like about my website?
+    <br/>
+  	<textarea name="Positive Feedback" maxlength="250"></textarea><br/>
+  	How can I improve?
+    <br/>
+  	<textarea name="Room for Improvement" maxlength="250"></textarea>
+  	<br/>
+  	Please provide your rating:
+  	<input type="radio" name="Ratings" required value="1">1
+	<input type="radio" name="Ratings" required value="2">2
+	<input type="radio" name="Ratings" required value="3">3
+	<input type="radio" name="Ratings" required value="4">4
+	<input type="radio" name="Ratings" required value="5">5<br>
+	<hr>
+    Send your response:
+  	<input type="submit" value="Send it">
+  	or
+  	<input type="reset" value="Clear" >
+</form>
+
+<!-- close "feedback" form -->
+</div>
+    
+<!-- open "footer" division. This division sets the footer of the webpage -->
+<div class="footer"> 
+<!-- open "sitemap_footer" division -->
+<div id="sitemap_footer">
+<a href="sitemap.html">SiteMap</a>
+<!-- close "sitemap_footer" division-->
+</div>
+<abbr title="Facebook"><a href="https://www.facebook.com/ramseth001" target="_blank"><img src="../images/facebook_logo.png" height="35" alt="facebook logo" ></a></abbr>&nbsp;
+<abbr title="Twitter"><a href="https://www.twitter.com/ramseth001" target="_blank"><img src="../images/twitter_logo.png" height="35" alt="twitter logo" ></a></abbr>
+<abbr title="Blogger"><a href="https://ramseth001blog.blogspot.com.au/" target="_blank"><img src="../images/blogger_logo.png" height="35" alt="twitter logo" ></a></abbr>
+<abbr title="Instagram"><a href="https://instagram.com/ramseth001" target="_blank"><img src="../images/instagram-logo.png" height="35" alt="twitter logo" ></a></abbr>
+
+<!-- close "footer" division -->
+</div>
+
+<!-- Close body of webpage -->
+</body>
+<!-- Close html-->
+</html>

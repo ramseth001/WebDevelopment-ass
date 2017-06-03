@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This is the HEADER section.......................... -->
+
+<head>
+	<!-- This statement tells browsers how to understand our characters -->
+	<meta charset="utf-8">
+	<!-- This is our title. It is mandatory. -->
+	<title>ImageMap</title>
+	<!-- This statement associates this html page with an external style sheet-->
+	<link rel="stylesheet" type="text/css" href="../CSS_ASS/css1.css"/>
+</head>
+
+<!-- This is the body section  --> 
+<body>
+
+<!-- open "navigation" division -->  
+<div id="navigation">
+
+<!-- open "banner" division. It sets the banner i.e. image at the top of the website -->  
+<div id="banner">
+<img src="../images/header_1.jpg" alt="Liverpool FC banner"  >
+</div>
+
+<!-- open "menu" division -->
+<div id="menu">
+
+<!-- This is our menu, using anchor links to other webpages. --> 
+<ul>
+	<li><a>Home</a>
+		<ul>
+			<li><a href="mission.html">Mission</a></li>
+			<li><a href="home.html">About me</a></li>
+			<li><a href="myPassion.html">My Passion</a></li>
+		</ul>
+	</li>
+
+	<li><a href="../../assignment.html">Assignment</a></li>
+	<li><a href="#" class="active">ImageMap</a></li>
+	<li><a href="gallery.html">Gallery</a></li>
+	<li><a href="video.html">Comic Video</a></li>
+	<li><a href="feedback.html">Feedback</a></li>
+	<li><a href="rss.html">RSS Feed</a></li>
+	<li><a href="actual_map.html">Location</a></li> 
+</ul>
+
+
+<!-- close "menu" division -->
+</div>
+
+<!-- close "navigation" division -->
+</div>
+<script>
+for(var x=0;x<=2;x++){
+document.write("</br>")
+}
+</script>
+
+<h3>This image (imagemap) shows the Liverpool team that started the 2005 Champions league final match (& won the trophy).
+</h3>
+
+<!-- open "imagemapp" division-->	
+<div id="imagemapp">
+
+<!-- This tag explains about the figure -->
+<p>Please check the reference number in the table to identify the player's name corresponding to the number 
+<br> mentioned in the image and click the <b>player's face</b> to read about them in detail.
+</p>
+<br>
+<img src="../images/imagemap.jpeg" alt="" usemap="#Map" />
+<map name="Map" id="Map">
+    <area alt="" target="_blank" title="Steven Gerrard" href="https://en.wikipedia.org/wiki/Steven_Gerrard" shape="poly" 
+    coords="386,186,373,191,368,205,371,223,378,234,381,238,389,239,399,231,406,218,405,204,398,188" />
+  	<area alt="" target="_blank" title="Jerzy Dudek" href="https://en.wikipedia.org/wiki/Jerzy_Dudek" shape="poly" 
+  	coords="334,21,350,30,351,50,342,65,332,71,321,65,319,49,317,35,323,26" />
+  	<area alt="" target="_blank" title="Milan Baroš" href="https://en.wikipedia.org/wiki/Milan_Baro%C5%A1" shape="poly" 
+  	coords="160,181,147,188,142,202,144,219,151,230,157,234,165,231,171,222,179,212,179,197,173,186" />
+  	<area alt="" target="_blank" title="Jamie Carragher" href="https://en.wikipedia.org/wiki/Jamie_Carragher" shape="poly" 
+  	coords="433,40,448,46,448,65,436,82,426,88,416,83,415,66,414,51,422,40" />
+  	<area alt="" target="_blank" title="Xabi Alonso" href="https://en.wikipedia.org/wiki/Xabi_Alonso" shape="poly" 
+  	coords="167,31,179,36,185,56,180,75,167,83,159,83,152,67,152,58,149,45,155,35" />
+  	<area alt="" target="_blank" title="Djimi Traoré" href="https://en.wikipedia.org/wiki/Djimi_Traor%C3%A9" shape="poly" 
+  	coords="111,29,119,34,123,43,126,56,121,62,117,75,105,79,97,70,94,58,95,46,96,36,103,29" />
+  	<area alt="" target="_blank" title="Steve Finnan" href="https://en.wikipedia.org/wiki/Steve_Finnan" shape="poly" 
+  	coords="66,178,76,183,82,188,84,203,81,214,77,222,72,230,61,233,56,227,50,214,49,200,52,187,60,179" />
+  	<area alt="" target="_blank" title="John Arne Riise" href="https://en.wikipedia.org/wiki/John_Arne_Riise" shape="poly" 
+  	coords="524,158,537,167,540,186,537,203,526,212,515,215,508,208,502,197,502,177,510,163" />
+  	<area alt="" target="_blank" title="Sami Hyypiä" href="https://en.wikipedia.org/wiki/Sami_Hyypi%C3%A4" shape="poly" 
+  	coords="247,14,262,24,268,36,262,57,250,64,240,62,233,53,232,40,229,31,235,17" />
+  	<area alt="" target="_blank" title="Luis García" href="https://en.wikipedia.org/wiki/Luis_Garc%C3%ADa_(footballer,_born_1978)" shape="poly" 
+  	coords="271,180,280,184,285,188,290,197,291,206,288,212,283,226,276,231,267,233,260,224,255,213,253,201,254,188,260,182" />
+  	<area alt="" target="_blank" title="Harry Kewell" href="https://en.wikipedia.org/wiki/Harry_Kewell" shape="poly" 
+  	coords="498,32,508,38,515,47,518,56,516,66,514,75,506,80,500,85,491,87,484,78,479,69,480,60,479,50,484,38" />
+</map>
+<p style="clear:both"></p>
+<br><br>
+<!-- close "imagemapp" division-->	
+</div>
+
+<!-- This "clear" division is to keep content from wrapping up around the previous division -->   
+<div id="clear">
+</div>
+
+<!-- This table lists the name of the players present in the figure -->
+<br><br>
+<table id="t02">
+<tr>
+<th>Ref. No.</th>
+<th>Player Name</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Djimi Traoré</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Xabi Alonso</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sami Hyypiä</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Jerzy Dudek</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Jamie Carragher</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Harry Kewell</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Steve Finnan</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Milan Baroš</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Luis García</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Steven Gerrard</td>
+</tr>
+<tr>
+<td>11</td>
+<td>John Arne Riise</td>
+</tr>
+</table>
+
+<!-- open "footer" division. This division sets the footer of the webpage -->
+<div class="footer"> 
+<!-- open "sitemap_footer" division -->
+<div id="sitemap_footer">
+<a href="sitemap.html">SiteMap</a>
+<!-- close "sitemap_footer" division-->
+</div>
+<abbr title="Facebook"><a href="https://www.facebook.com/ramseth001" target="_blank"><img src="../images/facebook_logo.png" height="35" alt="facebook logo" ></a></abbr>&nbsp;
+<abbr title="Twitter"><a href="https://www.twitter.com/ramseth001" target="_blank"><img src="../images/twitter_logo.png" height="35" alt="twitter logo" ></a></abbr>
+<abbr title="Blogger"><a href="https://ramseth001blog.blogspot.com.au/" target="_blank"><img src="../images/blogger_logo.png" height="35" alt="twitter logo" ></a></abbr>
+<abbr title="Instagram"><a href="https://instagram.com/ramseth001" target="_blank"><img src="../images/instagram-logo.png" height="35" alt="twitter logo" ></a></abbr>
+
+<!-- close "footer" division -->
+</div>
+
+<!-- Close body of webpage -->
+</body>
+<!-- Close html-->
+</html>

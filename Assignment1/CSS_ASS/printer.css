@@ -1,0 +1,78 @@
+/* This is the style sheet for printer friendly css */
+
+
+
+
+/* formatting h3 heading tag*/
+h3 {
+	text-align: left;
+    color: brown;
+    font-family: "Courier", Arial, "Times New Roman", Times;
+}
+
+
+/* CSS rules for navigation division */
+#navigation {
+	left:0;	
+	width: 100%;
+	position: fixed;
+	/* eliminates small gap at top of the page */
+	top: 0px;
+	background: black;
+	height: 95px;
+	z-index: 1;
+	display:none;
+}
+
+/* CSS rules for banner division: format the image size */
+#banner img{
+	width: 100%;
+	height:120px;
+	margin: 0px;
+	display:none;
+}
+
+/* Menu division: format the menu generally including background colour and style */
+#menu {
+	width: 100%;
+	height:50px;
+	font-size: 15px;
+	font-family:  Arial, "Times New Roman", Times;
+	font-weight: bold;
+	text-align: center;
+	background-color: black;
+	display:none;
+ }
+
+
+/* Formatting the body of all webpages and adding a background picture */
+body {
+	font-family: "Cochin", Arial, "Times New Roman", Times;
+}
+
+/* footer division: format the footer generally including background colour and style */
+.footer {
+	position: fixed;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	background-color: black;
+  	text-align: center;
+  	display:none;
+}
+
+
+
+/* myself and mission division: formatting the paragraphs */
+#mission p{
+	text-align:justify;
+}
+
+#mission ul.about{
+margin-left:15%;
+}
+
+
+
+
+

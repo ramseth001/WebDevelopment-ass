@@ -1,0 +1,163 @@
+/* This is my alternative style sheet */
+
+/* formatting h4 heading tag*/
+h4 {
+    color: black; /* changed rule 1*/
+    margin-left: 25%;
+    font-family: "Times New Roman", Arial, "Courier", Times; /* changed rule 2*/
+}
+
+
+/* CSS rules for navigation division */
+#navigation {
+	left:0;	
+	width: 100%;
+	position: fixed;
+	/* eliminates small gap at top of the page */
+	top: 0px;
+	background: black;
+	height: 95px;
+	z-index: 1;
+}
+
+/* CSS rules for banner division: format the image size */
+#banner img{
+	width: 100%;
+	height:120px;
+	margin: 0px;
+}
+
+/* Menu division: format the menu generally including background colour and style */
+#menu {
+	width: 100%;
+	height:50px;
+	font-size: 15px;
+	font-family:  Arial, "Times New Roman", Times;
+	font-weight: bold;
+	text-align: center;
+	background-color: #e64d00; /* changed rule 3*/
+ }
+
+/* Menu division: format the unordered list so that it appears directly below the title of the page and below the edge of the colour background */
+#menu ul {
+	height: auto;
+	margin: -10px;
+}
+
+/* Menu division: format the list items so that they display across the page instead of in a vertical list */
+#menu li {
+	display: inline-block;
+	margin : 7px;
+	padding: 10px;
+}
+
+#menu ul ul {
+	margin-top:5px;
+	display: none;
+	list-style-type: none;
+	position: absolute;
+	background-color: #ff5500; /* changed rule */
+	min-width: 125px;
+}
+
+/* To show the links inside drop down as a list */
+#menu ul ul li {
+	padding: 5px;
+	display:list-item;	
+}
+
+/* How each of the link appears within the drop down box.*/
+#menu ul ul a {
+	color: black;
+	display: block;
+}
+
+/* This is the main rule that displays the dropdown when the mouse hovers on the Home Link */
+#menu ul li:hover > ul {
+	display:block;
+	padding:0;
+}
+
+/* Menu division: format the link items so that they are dark blue, spaced apart, and do not have underlines */
+#menu a {
+    text-decoration: none;
+    color: black; /* changed rule 4*/
+    padding: 8px 8px 8px 8px;
+}
+
+/* visited link */
+#menu a.active{
+    color: white;
+}
+
+/* Feedback division: Our form formatting and adding a background image */
+#feedback form {background: url("../images/003_1.jpg"); /* changed rule 5*/
+	font-family: "Times New Roman",Arial, Times;
+	border: 3px solid yellow; /* changed rule 6*/
+	border-radius: 5px;
+	padding: 7px;
+}
+
+/* Feedback division: formatting input type */
+#feedback input[type="text"], #feedback input[type="email"] {
+	width: 200%;
+}
+
+/* Feedback division: formatting input type */
+#feedback input[type="submit"], #feedback input[type="reset"]
+{
+	width: 60px;
+  	height: 30px;
+  	background-color: green; /* changed rule 7*/
+  	color: yellow;  /* changed rule 8*/
+}
+
+/* Feedback division: formatting input type for hover */
+#feedback input[type="submit"]:hover, #feedback input[type="reset"]:hover
+{
+	background-color: #ff66ff; /* changed rule 9*/
+  	color: black; 
+}
+
+/* Feedback division: formatting textarea type */
+#feedback textarea {
+	width: 90%;
+	height: 5em; /* changed rule 10*/
+	resize:none;
+}
+
+/* Feedback division: formatting cell padding for the table used */
+#feedback td{
+	padding:3px; /* changed rule 11*/
+}
+
+/* Formatting the body of all webpages and adding a background picture */
+body {
+	font-family: "Cochin", Arial, "Times New Roman", Times; 
+	padding-top: 105px;
+	background: url("../images/background4.jpeg"); /* changed rule 12*/
+}
+
+/* footer division: format the footer generally including background colour and style */
+.footer {
+	position: fixed;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	background-color: #e64d00; /* changed rule 13*/
+  	text-align: center;
+}
+
+/* sitemap_footer division: format the sitemap anchor tag in the footer */
+#sitemap_footer a{
+	color: white;
+	position: absolute;
+	top: 25%;
+	right: 90%; /* changed rule 14*/
+	float: left;
+	text-decoration: none;
+}
+
+
+
+

@@ -1,0 +1,272 @@
+/* This is my style sheet */
+
+/* formatting h2 heading tag and adding animation to it */
+h2 {
+	text-align: center;
+    color: navy;
+    margin-left: 20px;
+    
+    -webkit-animation: mymove 5s infinite; 
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    50% {text-shadow: 10px 20px 30px red;}
+}
+
+/* formatting h4 heading tag*/
+h4 {
+    color: navy;
+    margin-left: 25%;
+    font-family: "Courier", Arial, "Times New Roman", Times;
+}
+
+/* formatting h3 heading tag*/
+h3 {
+	text-align: center;
+    color: brown;
+    font-family: "Courier", Arial, "Times New Roman", Times;
+}
+
+
+/* CSS rules for navigation division */
+#navigation {
+	left:0;	
+	width: 100%;
+	position: fixed;
+	/* eliminates small gap at top of the page */
+	top: 0px;
+	background: black;
+	height: 95px;
+	z-index: 1;
+}
+
+/* CSS rules for banner division: format the image size */
+#banner img{
+	width: 100%;
+	height:120px;
+	margin: 0px;
+}
+
+/* Menu division: format the menu generally including background colour and style */
+#menu {
+	width: 100%;
+	height:50px;
+	font-size: 15px;
+	font-family:  Arial, "Times New Roman", Times;
+	font-weight: bold;
+	text-align: center;
+	background-color: black;
+ }
+
+/* Menu division: format the unordered list so that it appears directly below the title of the page and below the edge of the colour background */
+#menu ul {
+	height: auto;
+	margin: -10px;
+}
+
+/* Menu division: format the list items so that they display across the page instead of in a vertical list */
+#menu li {
+	display: inline-block;
+	margin : 7px;
+	padding: 10px;
+}
+
+#menu ul ul {
+	margin-top:5px;
+	display: none;
+	list-style-type: none;
+	position: absolute;
+	background-color: black;
+	min-width: 125px;
+}
+
+/* To show the links inside drop down as a list */
+#menu ul ul li {
+	padding: 5px;
+	display:list-item;	
+}
+
+/* How each of the link appears within the drop down box.*/
+#menu ul ul a {
+	color: yellow;
+	display: block;
+}
+
+/* This is the main rule that displays the dropdown when the mouse hovers on the Home Link */
+#menu ul li:hover > ul {
+	display:block;
+	padding:0;
+}
+
+/* Menu division: format the link items so that they are dark blue, spaced apart, and do not have underlines */
+#menu a {
+    text-decoration: none;
+    color: yellow;
+    padding: 8px 8px 8px 8px;
+}
+
+/* visited link */
+#menu a.active{
+    color: white;
+}
+
+/* Feedback division: Our form formatting and adding a background image */
+#feedback form {background: url("../images/background4.jpeg");
+	font-family: "Times New Roman",Arial, Times;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 7px;
+}
+
+/* Feedback division: formatting input type */
+#feedback input[type="text"], #feedback input[type="email"] {
+	width: 200%;
+}
+
+/* Feedback division: formatting input type */
+#feedback input[type="submit"], #feedback input[type="reset"]
+{
+	width: 60px;
+  	height: 30px;
+  	background-color: black;
+  	color: white; 
+}
+
+/* Feedback division: formatting input type for hover */
+#feedback input[type="submit"]:hover, #feedback input[type="reset"]:hover
+{
+	background-color: #7af442;
+  	color: black; 
+}
+
+/* Feedback division: formatting textarea type */
+#feedback textarea {
+	width: 90%;
+	height: 3em;
+	resize:none;
+}
+
+/* Feedback division: formatting cell padding for the table used */
+#feedback td{
+	padding:2px;
+}
+
+/* Formatting the body of all webpages and adding a background picture */
+body {
+	font-family: "Cochin", Arial, "Times New Roman", Times;
+	padding-top: 105px;
+    background-image: url("../images/003_1.jpg");
+}
+
+/* footer division: format the footer generally including background colour and style */
+.footer {
+	position: fixed;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	background-color: black;
+  	text-align: center;
+}
+
+/* sitemap_footer division: format the sitemap anchor tag in the footer */
+#sitemap_footer a{
+	color: white;
+	position: absolute;
+	top: 25%;
+	left: 90%;
+	float: left;
+	text-decoration: none;
+}
+
+/* myself division: formatting the image */
+#myself img {
+	float: left;
+	margin-right: 20px;
+}
+
+/* myself division: formatting the anchor tags */
+#myself a{
+	text-decoration: none;
+	color:blue;
+}
+
+/* myself and mission division: formatting the paragraphs */
+#myself p, #mission p, #aboutmy p{
+	text-align:justify;
+	margin-right: 2cm;
+}
+
+#aboutmy ul{
+margin-left:15%;
+}
+
+/* CSS rules for sitemapp division */
+#sitemapp{
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	margin: -100px 0 0 -100px;
+	font-family: "Courier", Arial, "Times New Roman", Times;
+	font-size:20px;
+}
+
+#sitemapp a{
+	text-decoration:none;
+}
+
+#sitemapp ul.b {
+	list-style-type: square;
+}
+
+#sitemapp ul.a {
+	list-style-type: disc;
+}
+
+/* CSS rules for imagemapp division */
+#imagemapp{
+	float:left;
+}
+
+#imagemapp p{
+	font-size:18px;
+}
+
+#clear {
+  clear: right;
+}
+
+/* t01 division: formatting the table, table heading and table data*/
+#t01, table#t01 th, table#t01 td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/* t01 division: formatting the hover property of table data*/
+table#t01 td:hover{
+	background-color:#ffffb3
+}
+
+/* t01 division: formatting the table margin*/
+table#t01{
+	margin: 0px auto; 
+}
+
+/* t01 division: formatting the table alignment in the webpage*/
+td.alignment {
+   text-align: center;
+}
+
+/* t02 division: formatting the table, table heading and table data*/
+#t02, table#t02 th, table#t02 td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: Arial, Verdana, sans-serif;
+    font-size:	16px;
+}
+
+/* CSS rules for floating-panel division*/
+#floating-panel span{
+	font-size:	13px;
+}

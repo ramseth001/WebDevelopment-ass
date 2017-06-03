@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This is the HEADER section.......................... -->
+
+<head>
+	<!-- This statement tells browsers how to understand our characters -->
+	<meta charset="utf-8">
+	<!-- This is our title. It is mandatory. -->
+	<title>RSS</title>
+	<!-- This statement associates this html page with an external style sheet-->
+	<link rel="stylesheet" type="text/css" href="../CSS_ASS/css1.css"/>
+</head>
+
+<!-- This is the body section  --> 
+<body>
+
+<!-- open "navigation" division -->  
+<div id="navigation">
+
+<!-- open "banner" division. It sets the banner i.e. image at the top of the website -->  
+<div id="banner">
+<img src="../images/header_1.jpg" alt="Liverpool FC banner"  >
+</div>
+
+<!-- open "menu" division -->
+<div id="menu">
+
+<!-- This is our menu, using anchor links to other webpages. --> 
+<ul>
+	<li><a>Home</a>
+		<ul>
+			<li><a href="mission.html">Mission</a></li>
+			<li><a href="home.html">About me</a></li>
+			<li><a href="myPassion.html">My Passion</a></li>
+		</ul>
+	</li>
+
+	<li><a href="../../assignment.html">Assignment</a></li>
+	<li><a href="imagemap_.html">ImageMap</a></li>
+	<li><a href="gallery.html">Gallery</a></li>
+	<li><a href="video.html">Comic Video</a></li>
+	<li><a href="feedback.html">Feedback</a></li>
+	<li><a href="#" class="active">RSS Feed</a></li>
+	<li><a href="actual_map.html">Location</a></li> 
+</ul>
+
+<!-- close "menu" division -->
+</div>
+
+<!-- close "navigation" division -->
+</div>
+
+<script>
+for(var x=0;x<=2;x++){
+document.write("</br>")
+}
+</script>
+
+<!-- This script loads the feeds from the rss widget created in feed.informer.com -->
+<script type="text/javascript" src="http://feed.informer.com/widgets/TQCPPBXZV1.js">
+</script>
+
+<!-- open "footer" division. This division sets the footer of the webpage -->
+<div class="footer"> 
+<div id="sitemap_footer">
+<a href="sitemap.html" class="active">SiteMap</a>
+</div>
+<abbr title="Facebook"><a href="https://www.facebook.com/ramseth001" target="_blank"><img src="../images/facebook_logo.png" height="35" alt="facebook logo" ></a></abbr>&nbsp;
+<abbr title="Twitter"><a href="https://www.twitter.com/ramseth001" target="_blank"><img src="../images/twitter_logo.png" height="35" alt="twitter logo" ></a></abbr>
+<abbr title="Blogger"><a href="https://ramseth001blog.blogspot.com.au/" target="_blank"><img src="../images/blogger_logo.png" height="35" alt="twitter logo" ></a></abbr>
+<abbr title="Instagram"><a href="https://instagram.com/ramseth001" target="_blank"><img src="../images/instagram-logo.png" height="35" alt="twitter logo" ></a></abbr>
+
+<!-- close "footer" division -->
+</div>
+
+<!-- Close body of webpage -->
+</body>
+<!-- Close html-->
+</html>
